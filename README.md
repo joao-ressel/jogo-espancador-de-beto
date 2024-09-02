@@ -27,7 +27,7 @@
 
 #  Índice
 
-- :rocket: [Sobre o Projeto](#rocket-sobre-o-projeto)
+- [Sobre o Projeto](#rocket-sobre-o-projeto)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
 - 📦️ [Como utilizar o projeto](#%EF%B8%8F-como-utilizar-o-projeto)
 - [Link](#link)
@@ -55,4 +55,4 @@ Para copiar o projeto, utilize os comandos:
 ```
 
 ## Link
-[repositório do Talison-Migel](https://github.com/joao-ressel/joao-espancador-de-beto)
+[Link para o jogo](https://joao-ressel.github.io/jogo-espancador-de-beto/)
