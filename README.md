@@ -13,8 +13,8 @@
   
   <img src="https://img.shields.io/badge/code%20quality-A-green"/>
 
-  <a href="https://www.linkedin.com/in/joao-ressel/" hei>
-    <img alt="Made by João" src="https://github.com/joao-ressel.png">
+  <a href="https://www.linkedin.com/in/joao-ressel/">
+    <img alt="Made by João" src="https://img.shields.io/badge/made%20by-joao-ressel">
   </a>
 </p>
 
