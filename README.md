@@ -18,7 +18,6 @@
   </a>
 </p>
 
----
 
 <p align="center">
   <img alt="Imagem da Aplicação" src="jogo-espancador-de-beto.png" />
