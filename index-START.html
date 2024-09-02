@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Espancador de Beto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./flauberth-sem-fundo.png" />
+</head>
+<body >
+  <div id="click-area">
+  <div>
+    <h1>Espancador de Beto </h1>
+    <h2>Score: <span class="score">0</span></h2>
+  </div>
+  <div class="botoes">
+  <div id="tempo">Tempo restante: 00s </div>
+  <button onClick="startGame()">Começar!</button>
+</div>
+
+
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const areaClicavel = document.getElementById('click-area');
+
+    areaClicavel.addEventListener('click', () => {
+        // Adiciona a classe que altera o cursor
+        document.body.classList.add('marreta');
+        
+        // Espera 1 segundo (1000 milissegundos) e depois remove a classe
+        setTimeout(() => {
+            document.body.classList.remove('marreta');
+        }, 100);
+    });
+});
+
+
+
+
+    const holes = document.querySelectorAll('.hole');
+    const scoreBoard = document.querySelector('.score');
+    const moles = document.querySelectorAll('.mole');
+    let lastHole;
+    let timeUp = false
+    let score = 0
+
+    function randTime(min, max) {
+        return Math.round(Math.random() * (max - min) + min)
+    }
+
+
+    function randomHole(holes) {
+        const idx = Math.floor(Math.random() * holes.length)
+        const hole = holes[idx]
+
+        if(hole === lastHole) {
+            console.log('Ah nah thats the same one bud')
+            return randomHole(holes)
+        }
+
+        lastHole = hole
+        return hole
+    }
+
+    function peep() {
+        const time = randTime(200, 1000)
+        const hole = randomHole(holes)
+        hole.classList.add('up')
+
+        setTimeout(() => {
+            hole.classList.remove('up')
+            if(!timeUp) peep()
+        }, time)
+    }
+
+    let tempo = 30000;
+    let tempoDisplay = document.getElementById('tempo');
+
+    function startGame() {
+        tempoRestante = tempo / 1000; // Converte o tempo para segundos
+        tempoDisplay.textContent = `Tempo restante: ${tempoRestante}s`;
+        scoreBoard.textContent = 0
+        timeUp = false
+        score = 0
+        peep()
+        const intervalo = 1000; // Atualiza o tempo a cada segundo
+
+    // Atualiza o tempo restante a cada segundo
+    let timer = setInterval(() => {
+        if (timeUp) {
+            clearInterval(timer);
+            tempoDisplay.textContent = 'Tempo esgotado!';
+        } else {
+            tempoRestante -= 1;
+            tempoDisplay.textContent = `Tempo restante: ${tempoRestante}s`;
+            if (tempoRestante <= 0) {
+                timeUp = true;
+            }
+        }
+    }, intervalo);
+
+    // Define timeUp como true após o tempo total
+    setTimeout(() => timeUp = true, tempo);
+    }
+
+    function bonk(e) {
+        if(!e.isTrusted) return
+        score++
+        this.classList.remove('up')
+        scoreBoard.textContent = score
+    }
+
+    moles.forEach(mole => mole.addEventListener('click', bonk))
+
+
+    
+  
+  
+</script>
+</div>
+
+</body>
+</html>

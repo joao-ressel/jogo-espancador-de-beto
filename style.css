@@ -1,0 +1,135 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #ffffff;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier Prime', cursive;
+  cursor: url('mouse.svg'), auto;
+}
+
+
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 0;
+  color: #623ffc;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0;
+  color: #623ffc;
+}
+
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #623ffc;
+  border: solid 3px #623ffc;;
+  flex: 1;
+  height: 5rem;
+  font-family: 'Courier Prime', cursive;
+  font-weight: bold;
+  cursor: url('mouse-click.svg'), auto;
+  &&:hover{
+    background-color: #623ffc;
+    color: #fff;
+    transition: ease-in-out;
+  }
+}
+
+#click-area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 8rem);
+  margin: 2rem auto;
+}
+
+#tempo{
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: #623ffc;
+  color: aliceblue;
+  height: 5rem;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  background: #623ffc;
+  color: #fff;
+  padding: 0 3rem;
+
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('flauberth-sem-fundo.png') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.marreta{
+  cursor: url('mouse-click.svg'), auto;
+}
+
+
+.botoes{
+  display: flex;
+  width: 600px;
+  gap: 2rem;
+}
+

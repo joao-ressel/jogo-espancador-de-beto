@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71.999" height="77.839" viewBox="0 0 57.406 62.062">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5842ff;
+        stroke: #5842ff;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Triângulo_1" data-name="Triângulo 1" class="cls-1" d="M63.322,32.867a3,3,0,0,1,0,5.267L12.909,65.648a3,3,0,0,1-4.437-2.633V7.985a3,3,0,0,1,4.437-2.633Z" transform="translate(-7.969 -4.469)"/>
+</svg>
