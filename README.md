@@ -30,7 +30,7 @@
 - :rocket: [Sobre o Projeto](#rocket-sobre-o-projeto)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
 - 📦️ [Como utilizar o projeto](#%EF%B8%8F-como-utilizar-o-projeto)
-- :rocket: [Link](#link)
+- [Link](#link)
 ---
 
 ## :rocket: Sobre o Repositório
@@ -53,3 +53,6 @@ Para copiar o projeto, utilize os comandos:
 ```bash
   ❯ git clone https://github.com/joao-ressel/espancador-de-beto
 ```
+
+## Link
+[repositório do Talison-Migel](https://github.com/joao-ressel/joao-espancador-de-beto)
