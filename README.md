@@ -11,9 +11,9 @@
 
   <br>
   
-  <img src="./jogo-espancador-de-beto.png"/>
+  <img src="https://img.shields.io/badge/code%20quality-A-green"/>
 
-  <a href="https://www.linkedin.com/in/joao-ressel/">
+  <a href="https://www.linkedin.com/in/joao-ressel/" hei>
     <img alt="Made by João" src="https://github.com/joao-ressel.png">
   </a>
 </p>
@@ -21,7 +21,7 @@
 ---
 
 <p align="center">
-  <img alt="Imagem da Aplicação" src="mole.jpg" />
+  <img alt="Imagem da Aplicação" src="jogo-espancador-de-beto.png" />
 </p>
 
 ---
