@@ -4,18 +4,18 @@ html {
   background: #ffffff;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Courier Prime', cursive;
-  cursor: url('mouse.svg'), auto;
+  font-family: "Courier Prime", cursive;
+  cursor: url("mouse.svg"), auto;
 }
-
-
 
 h1 {
   text-align: center;
@@ -33,26 +33,26 @@ h2 {
   color: #623ffc;
 }
 
-button{
+button {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   color: #623ffc;
-  border: solid 3px #623ffc;;
+  border: solid 3px #623ffc;
   flex: 1;
   height: 5rem;
-  font-family: 'Courier Prime', cursive;
+  font-family: "Courier Prime", cursive;
   font-weight: bold;
-  cursor: url('mouse-click.svg'), auto;
-  &&:hover{
+  cursor: url("mouse-click.svg"), auto;
+  &&:hover {
     background-color: #623ffc;
     color: #fff;
     transition: ease-in-out;
   }
 }
 
-#click-area{
+#click-area {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +62,7 @@ button{
   margin: 2rem auto;
 }
 
-#tempo{
+#tempo {
   font-weight: bold;
   font-size: 2rem;
   background-color: #623ffc;
@@ -101,36 +101,61 @@ button{
   display: block;
   background: url(dirt.svg) bottom center no-repeat;
   background-size: contain;
-  content: '';
+  content: "";
   width: 100%;
-  height:70px;
+  height: 70px;
   position: absolute;
   z-index: 2;
   bottom: -30px;
 }
 
 .mole {
-  background: url('flauberth-sem-fundo.png') bottom center no-repeat;
+  background: url("flauberth-sem-fundo.png") bottom center no-repeat;
   background-size: 60%;
   position: absolute;
   top: 100%;
   width: 100%;
   height: 100%;
-  transition:all 0.4s;
+  transition: all 0.4s;
 }
 
 .hole.up .mole {
   top: 0;
 }
 
-.marreta{
-  cursor: url('mouse-click.svg'), auto;
+.marreta {
+  cursor: url("mouse-click.svg"), auto;
 }
 
-
-.botoes{
+.botoes {
   display: flex;
   width: 600px;
   gap: 2rem;
 }
 
+@media (width <= 768px) {
+  body {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+  }
+  h1{
+    font-size: 3.2rem;
+  }
+
+  #click-area {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .botoes{
+    width: 100%;
+    flex-direction: column;
+    height: 100px;
+  }
+  .game {
+   width: 100%;
+  }
+ 
+ 
+}
